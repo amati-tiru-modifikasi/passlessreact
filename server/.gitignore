@@ -6,3 +6,4 @@ dist/
 coveratge/
 .vscode/
 .parcel-cache/
+.env
