@@ -28,6 +28,8 @@ app.post('/sendOTP',(req, res) => {
         body: `Your on time Login Password for CFM is ${otp}`,
         from: +12676425662,
         to: phone
-    }).then((message)=> console.log(message))
+    }).then((message)=> console.log(message)).catch((err) => console.error(err) )
+
+    res.status(200).send({phone, hash:fullHash})
 })
 app.listen(4000)
